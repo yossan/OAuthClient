@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13529"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ViewController" customModule="OAuthClientDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="refreshRequestView" destination="c22-O7-iKe" id="At4-xW-jXQ"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe" customClass="RefreshTokenRequestView" customModule="OAuthClientDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qMT-WC-SwS">
+                    <rect key="frame" x="197" y="79" width="87" height="32"/>
+                    <buttonCell key="cell" type="push" title="Refresh" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="i8I-1t-L6r">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="onRefreshTokenBt:" target="-2" id="9lf-bJ-hKX"/>
+                    </connections>
+                </button>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="udV-Mm-6Gi">
+                    <rect key="frame" x="194" y="127" width="92" height="17"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Multiline Label" id="oMd-12-I9G">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="udV-Mm-6Gi" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="3Q2-c4-f4Y"/>
+                <constraint firstItem="qMT-WC-SwS" firstAttribute="top" secondItem="udV-Mm-6Gi" secondAttribute="bottom" constant="20" id="4Yp-mz-pXs"/>
+                <constraint firstItem="udV-Mm-6Gi" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="FO9-16-fGq"/>
+                <constraint firstItem="qMT-WC-SwS" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="Qok-pb-C3g"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="udV-Mm-6Gi" secondAttribute="trailing" constant="10" id="wgC-Jv-LpT"/>
+                <constraint firstItem="udV-Mm-6Gi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="c22-O7-iKe" secondAttribute="leading" constant="10" id="yKv-bX-Vei"/>
+            </constraints>
+            <connections>
+                <outlet property="accessTokenLabel" destination="udV-Mm-6Gi" id="R5u-8H-bvi"/>
+            </connections>
+        </customView>
+    </objects>
+</document>

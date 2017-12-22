@@ -1,0 +1,358 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4A29463A1FDCE463002D94EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2946391FDCE463002D94EE /* AppDelegate.swift */; };
+		4A29463C1FDCE463002D94EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A29463B1FDCE463002D94EE /* ViewController.swift */; };
+		4A29463E1FDCE463002D94EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A29463D1FDCE463002D94EE /* Assets.xcassets */; };
+		4A2946411FDCE463002D94EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A29463F1FDCE463002D94EE /* Main.storyboard */; };
+		4A98E3ED1FDD23600037FA45 /* AccessTokenFetchFailedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A98E3EC1FDD23600037FA45 /* AccessTokenFetchFailedView.xib */; };
+		4A98E3F11FDE3FF10037FA45 /* RefreshTokenRequestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A98E3F01FDE3FF10037FA45 /* RefreshTokenRequestView.xib */; };
+		4A98E3F31FDE403B0037FA45 /* RefreshTokenRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A98E3F21FDE403B0037FA45 /* RefreshTokenRequestView.swift */; };
+		4A98E3F91FDE7E170037FA45 /* provider.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A98E3F81FDE7E170037FA45 /* provider.plist */; };
+		4AB0D8E71FECC8870099890A /* OAuthClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB0D8E81FECC8870099890A /* OAuthClient.framework */; };
+		4AB0D8EA1FECC89F0099890A /* OAuthClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB0D8E81FECC8870099890A /* OAuthClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4A2CEFBE1FECA81F008628AC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4AB0D8EA1FECC89F0099890A /* OAuthClient.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4A2946361FDCE463002D94EE /* OAuthClientDemo-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OAuthClientDemo-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A2946391FDCE463002D94EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4A29463B1FDCE463002D94EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4A29463D1FDCE463002D94EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4A2946401FDCE463002D94EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4A2946421FDCE463002D94EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A2946431FDCE463002D94EE /* OAuthClientDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OAuthClientDemo.entitlements; sourceTree = "<group>"; };
+		4A98E3EC1FDD23600037FA45 /* AccessTokenFetchFailedView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccessTokenFetchFailedView.xib; sourceTree = "<group>"; };
+		4A98E3F01FDE3FF10037FA45 /* RefreshTokenRequestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RefreshTokenRequestView.xib; sourceTree = "<group>"; };
+		4A98E3F21FDE403B0037FA45 /* RefreshTokenRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTokenRequestView.swift; sourceTree = "<group>"; };
+		4A98E3F81FDE7E170037FA45 /* provider.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = provider.plist; sourceTree = "<group>"; };
+		4AB0D8E81FECC8870099890A /* OAuthClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = OAuthClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4A2946331FDCE463002D94EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AB0D8E71FECC8870099890A /* OAuthClient.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4A29462D1FDCE463002D94EE = {
+			isa = PBXGroup;
+			children = (
+				4A2946381FDCE463002D94EE /* OAuthClientDemo */,
+				4A2946371FDCE463002D94EE /* Products */,
+				4AE888001FECA4FC006696DE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4A2946371FDCE463002D94EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4A2946361FDCE463002D94EE /* OAuthClientDemo-macOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4A2946381FDCE463002D94EE /* OAuthClientDemo */ = {
+			isa = PBXGroup;
+			children = (
+				4A2946391FDCE463002D94EE /* AppDelegate.swift */,
+				4A29463B1FDCE463002D94EE /* ViewController.swift */,
+				4A98E3F81FDE7E170037FA45 /* provider.plist */,
+				4A29463D1FDCE463002D94EE /* Assets.xcassets */,
+				4A29463F1FDCE463002D94EE /* Main.storyboard */,
+				4A2946421FDCE463002D94EE /* Info.plist */,
+				4A2946431FDCE463002D94EE /* OAuthClientDemo.entitlements */,
+				4A98E3EC1FDD23600037FA45 /* AccessTokenFetchFailedView.xib */,
+				4A98E3F01FDE3FF10037FA45 /* RefreshTokenRequestView.xib */,
+				4A98E3F21FDE403B0037FA45 /* RefreshTokenRequestView.swift */,
+			);
+			path = OAuthClientDemo;
+			sourceTree = "<group>";
+		};
+		4AE888001FECA4FC006696DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4AB0D8E81FECC8870099890A /* OAuthClient.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4A2946351FDCE463002D94EE /* OAuthClientDemo-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A2946461FDCE463002D94EE /* Build configuration list for PBXNativeTarget "OAuthClientDemo-macOS" */;
+			buildPhases = (
+				4A2946321FDCE463002D94EE /* Sources */,
+				4A2946331FDCE463002D94EE /* Frameworks */,
+				4A2946341FDCE463002D94EE /* Resources */,
+				4A2CEFBE1FECA81F008628AC /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OAuthClientDemo-macOS";
+			productName = OAuthClientDemo;
+			productReference = 4A2946361FDCE463002D94EE /* OAuthClientDemo-macOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4A29462E1FDCE463002D94EE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = ysn551;
+				TargetAttributes = {
+					4A2946351FDCE463002D94EE = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 4A2946311FDCE463002D94EE /* Build configuration list for PBXProject "OAuthClientDemo-macOS" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4A29462D1FDCE463002D94EE;
+			productRefGroup = 4A2946371FDCE463002D94EE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4A2946351FDCE463002D94EE /* OAuthClientDemo-macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4A2946341FDCE463002D94EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A98E3F11FDE3FF10037FA45 /* RefreshTokenRequestView.xib in Resources */,
+				4A29463E1FDCE463002D94EE /* Assets.xcassets in Resources */,
+				4A2946411FDCE463002D94EE /* Main.storyboard in Resources */,
+				4A98E3F91FDE7E170037FA45 /* provider.plist in Resources */,
+				4A98E3ED1FDD23600037FA45 /* AccessTokenFetchFailedView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4A2946321FDCE463002D94EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A98E3F31FDE403B0037FA45 /* RefreshTokenRequestView.swift in Sources */,
+				4A29463C1FDCE463002D94EE /* ViewController.swift in Sources */,
+				4A29463A1FDCE463002D94EE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4A29463F1FDCE463002D94EE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A2946401FDCE463002D94EE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4A2946441FDCE463002D94EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4A2946451FDCE463002D94EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		4A2946471FDCE463002D94EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = OAuthClientDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.ysn551.OAuthClientDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		4A2946481FDCE463002D94EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = OAuthClientDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.ysn551.OAuthClientDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4A2946311FDCE463002D94EE /* Build configuration list for PBXProject "OAuthClientDemo-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A2946441FDCE463002D94EE /* Debug */,
+				4A2946451FDCE463002D94EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A2946461FDCE463002D94EE /* Build configuration list for PBXNativeTarget "OAuthClientDemo-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A2946471FDCE463002D94EE /* Debug */,
+				4A2946481FDCE463002D94EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4A29462E1FDCE463002D94EE /* Project object */;
+}
