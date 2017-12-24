@@ -1,0 +1,17 @@
+# Configure file
+OAuthClientDemo/iOS/OAuthClientDemo-iOS/provider.plist
+OAuthClientDemo/macOS/OAuthClientDemo/provider.plist
+
+# Xcode
+*.xcuserstate
+OAuthClient.xcodeproj/xcuserdata/
+OAuthClientDemo/iOS/OAuthClientDemo-iOS.xcodeproj/xcuserdata/
+OAuthClientDemo/macOS/OAuthClientDemo-macOS.xcodeproj/xcuserdata/
+OAuthClientDemo/OAuthClientDemo.xcworkspace/xcuserdata/
+
+# Carthage
+#
+# Add this line if you want to avoid checking in source code from Carthage dependencies.
+Carthage/Checkouts
+Carthage/Build
+Cartfile.resolved
