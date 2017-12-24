@@ -1,5 +1,5 @@
 //
-//  AthorizationViewController.swift
+//  AuthorizationViewController.swift
 //  OAuthClient-iOS
 //
 //  Created by yoshi-kou on 2017/12/22.
@@ -9,7 +9,7 @@ import UIKit
 import WebKit
 import Result
 
-public class AthorizationViewController: UIViewController {
+public class AuthorizationViewController: UIViewController {
 
     override public func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -48,7 +48,7 @@ public class AthorizationViewController: UIViewController {
     }
 }
 
-extension AthorizationViewController {
+extension AuthorizationViewController {
     fileprivate func callCompletionWithError(_ error: OAuthClientError) {
         self.callCompletionWithResult(.failure(error))
     }
@@ -64,7 +64,7 @@ extension AthorizationViewController {
     }
 }
 
-extension AthorizationViewController: WKNavigationDelegate {
+extension AuthorizationViewController: WKNavigationDelegate {
     
     public func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         guard let url = navigationAction.request.url else {

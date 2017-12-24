@@ -40,7 +40,7 @@ class ViewController: NSViewController {
 
     override func viewWillAppear() {
         if self.result == nil {
-            self.showAthorizationView()
+            self.showAuthorizationView()
         }
     }
     
@@ -57,7 +57,7 @@ class ViewController: NSViewController {
         if self.failedView != nil {
             self.failedView.removeFromSuperview()
         }
-        self.showAthorizationView()
+        self.showAuthorizationView()
     }
     
     @IBAction func onRefreshTokenBt(_ sender: Any) {
@@ -78,10 +78,10 @@ class ViewController: NSViewController {
 
     // MARK: -
     
-    private func showAthorizationView() {
-        let athorizationViewController = self.oauthClient.makeAthorizationViewController()
+    private func showAuthorizationView() {
+        let authorizationViewController = self.oauthClient.makeAuthorizationViewController()
         
-        athorizationViewController.completionHandler = { [weak athorizationViewController](result) in
+        authorizationViewController.completionHandler = { [weak authorizationViewController](result) in
             switch result {
             case .success(let token):
                 self.result = .success(token)
@@ -91,10 +91,10 @@ class ViewController: NSViewController {
                 self.handleFailureInFetchingToken(withError: error)
             }
             
-            athorizationViewController?.dismiss(nil)
+            authorizationViewController?.dismiss(nil)
         }
         
-        self.presentViewControllerAsSheet(athorizationViewController)
+        self.presentViewControllerAsSheet(authorizationViewController)
     }
     
     private func showAccessTokenFetchFailedView() {

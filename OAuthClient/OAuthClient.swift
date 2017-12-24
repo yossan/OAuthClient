@@ -22,16 +22,16 @@ public class OAuthClient: NSObject {
     }
     
 #if os(macOS)
-    public func makeAthorizationViewController() -> AthorizationViewController {
-        let athorizationView = AthorizationViewController(nibName: NSNib.Name("AthorizationViewController"), bundle: Bundle(identifier: "jp.ysn551.OAuthClient"))
-        athorizationView.provider = self.provider
-        return athorizationView
+    public func makeAuthorizationViewController() -> AuthorizationViewController {
+        let authorizationView = AuthorizationViewController(nibName: NSNib.Name("AuthorizationViewController"), bundle: Bundle(identifier: "jp.ysn551.OAuthClient"))
+        authorizationView.provider = self.provider
+        return authorizationView
     }
 #elseif os(iOS)
-    public func makeAthorizationViewController() -> AthorizationViewController {
-        let athorizationView = AthorizationViewController(nibName: "AthorizationViewController", bundle: Bundle(identifier: "jp.ysn551.OAuthClient"))
-        athorizationView.provider = self.provider
-        return athorizationView
+    public func makeAuthorizationViewController() -> AuthorizationViewController {
+        let authorizationView = AuthorizationViewController(nibName: "AuthorizationViewController", bundle: Bundle(identifier: "jp.ysn551.OAuthClient"))
+        authorizationView.provider = self.provider
+        return authorizationView
     }
 #endif
     

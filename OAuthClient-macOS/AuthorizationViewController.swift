@@ -1,5 +1,5 @@
 //
-//  AthorizationViewController.swift
+//  AuthorizationViewController.swift
 //  OAuthClient
 //
 //  Created by yoshi-kou on 2017/12/10.
@@ -10,7 +10,7 @@ import Cocoa
 import WebKit
 import Result
 
-public class AthorizationViewController: NSViewController {
+public class AuthorizationViewController: NSViewController {
 
     @IBOutlet weak var contentView: NSView!
     
@@ -43,7 +43,7 @@ public class AthorizationViewController: NSViewController {
     }
 }
 
-extension AthorizationViewController {
+extension AuthorizationViewController {
     fileprivate func callCompletionWithError(_ error: OAuthClientError) {
         self.callCompletionWithResult(.failure(error))
     }
@@ -59,7 +59,7 @@ extension AthorizationViewController {
     }
 }
 
-extension AthorizationViewController: WKNavigationDelegate {
+extension AuthorizationViewController: WKNavigationDelegate {
     
     public func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         

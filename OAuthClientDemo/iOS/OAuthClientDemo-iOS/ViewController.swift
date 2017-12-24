@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if self.result == nil {
-            self.showAthorizationView()
+            self.showAuthorizationView()
         }
     }
     
@@ -42,10 +42,10 @@ class ViewController: UIViewController {
     }
     
     
-    func showAthorizationView() {
-        let athorizationViewController = self.oauthClient.makeAthorizationViewController()
+    func showAuthorizationView() {
+        let authorizationViewController = self.oauthClient.makeAuthorizationViewController()
         
-        athorizationViewController.completionHandler = { [weak athorizationViewController](result) in
+        authorizationViewController.completionHandler = { [weak authorizationViewController](result) in
             self.result = result
             switch result {
             case .success(let token):
@@ -53,10 +53,10 @@ class ViewController: UIViewController {
             case .failure(let error):
                 print(error)
             }
-            athorizationViewController?.dismiss(animated: true, completion: nil)
+            authorizationViewController?.dismiss(animated: true, completion: nil)
         }
         
-        self.present(athorizationViewController, animated: true, completion: nil)
+        self.present(authorizationViewController, animated: true, completion: nil)
     }
 }
 

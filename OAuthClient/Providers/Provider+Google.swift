@@ -14,7 +14,7 @@ public extension Provider {
             clientId: clientId,
             clientSecret: clientSecret,
             redirectURI: redirectURI,
-            athorizationEndPoint: "https://accounts.google.com/o/oauth2/v2/auth",
+            authorizationEndPoint: "https://accounts.google.com/o/oauth2/v2/auth",
             accessTokenEndPoint: "https://www.googleapis.com/oauth2/v4/token",
             responseType: "code",
             scopes: scopes

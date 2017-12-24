@@ -10,27 +10,27 @@ import Foundation
 
 open class Provider {
 
-    let athorizationEndPoint: String
+    let authorizationEndPoint: String
     let accessTokenEndPoint: String
     let redirectURI: String
     
-    var athorizationQueries: [String: String]
+    var authorizationQueries: [String: String]
     var accesstokenQueries:  [String: String]
     var refreshTokenQueries: [String: String]
     
     init(clientId: String,
          clientSecret: String,
          redirectURI: String,
-         athorizationEndPoint: String,
+         authorizationEndPoint: String,
          accessTokenEndPoint: String,
          responseType: String,
          scopes: [String]) {
         
-        self.athorizationEndPoint = athorizationEndPoint
+        self.authorizationEndPoint = authorizationEndPoint
         self.accessTokenEndPoint = accessTokenEndPoint
         self.redirectURI = redirectURI
     
-        self.athorizationQueries = [
+        self.authorizationQueries = [
             "client_id": clientId,
             "redirect_uri": redirectURI,
             "response_type": responseType,
@@ -50,23 +50,23 @@ open class Provider {
     }
     
     public var authorizationURL: URL? {
-        var urlcomponents = URLComponents(string: self.athorizationEndPoint)
+        var urlcomponents = URLComponents(string: self.authorizationEndPoint)
 
-        urlcomponents?.queryItems = self.athorizationQueries.map { (element)  in
+        urlcomponents?.queryItems = self.authorizationQueries.map { (element)  in
             return URLQueryItem(name: element.key, value: element.value)
         }
         
         return urlcomponents?.url
     }
     
-    public func makeAccessTokenRequest(withCode athorizationCode: String) -> URLRequest {
+    public func makeAccessTokenRequest(withCode authorizationCode: String) -> URLRequest {
         var request = URLRequest(url: URL(string: self.accessTokenEndPoint)!)
         request.httpMethod = "POST"
         request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         var requestParams: [String] = self.accesstokenQueries.map{ (query) in
             return "\(query.key)=\(query.value)"
         }
-        requestParams.append("code=\(athorizationCode)")
+        requestParams.append("code=\(authorizationCode)")
         request.httpBody = requestParams.joined(separator: "&").data(using: .utf8)
         return request
     }

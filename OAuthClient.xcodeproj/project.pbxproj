@@ -13,7 +13,7 @@
 		4AC073A91FECA11A0004BB6A /* Provider+Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC073A51FECA11A0004BB6A /* Provider+Google.swift */; };
 		4AC073AA1FECA11A0004BB6A /* OAuthClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC073A61FECA11A0004BB6A /* OAuthClientError.swift */; };
 		4AC073AB1FECA11A0004BB6A /* OAuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC073A71FECA11A0004BB6A /* OAuthClient.swift */; };
-		4AC073AF1FECA1280004BB6A /* AthorizationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AC073AD1FECA1280004BB6A /* AthorizationViewController.xib */; };
+		4AC073AF1FECA1280004BB6A /* AuthorizationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AC073AD1FECA1280004BB6A /* AuthorizationViewController.xib */; };
 		4AE887F41FECA42C006696DE /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AE887F51FECA42C006696DE /* Result.framework */; };
 		4AE888041FECA559006696DE /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE888031FECA559006696DE /* Token.swift */; };
 		4AF502731FECACC300B05C05 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AF502741FECACC300B05C05 /* Result.framework */; };
@@ -22,9 +22,9 @@
 		4AF502781FECACEF00B05C05 /* OAuthClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC073A61FECA11A0004BB6A /* OAuthClientError.swift */; };
 		4AF502791FECACF300B05C05 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC073A31FECA11A0004BB6A /* Provider.swift */; };
 		4AF5027A1FECACF700B05C05 /* Provider+Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC073A51FECA11A0004BB6A /* Provider+Google.swift */; };
-		4AF5027C1FECB06700B05C05 /* AthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF5027B1FECB06700B05C05 /* AthorizationViewController.swift */; };
-		4AF5027F1FECB0B000B05C05 /* AthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF5027D1FECB0B000B05C05 /* AthorizationViewController.swift */; };
-		4AF502801FECB0B000B05C05 /* AthorizationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AF5027E1FECB0B000B05C05 /* AthorizationViewController.xib */; };
+		4AF5027C1FECB06700B05C05 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF5027B1FECB06700B05C05 /* AuthorizationViewController.swift */; };
+		4AF5027F1FECB0B000B05C05 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF5027D1FECB0B000B05C05 /* AuthorizationViewController.swift */; };
+		4AF502801FECB0B000B05C05 /* AuthorizationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AF5027E1FECB0B000B05C05 /* AuthorizationViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,13 +38,13 @@
 		4AC073A51FECA11A0004BB6A /* Provider+Google.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Provider+Google.swift"; sourceTree = "<group>"; };
 		4AC073A61FECA11A0004BB6A /* OAuthClientError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthClientError.swift; sourceTree = "<group>"; };
 		4AC073A71FECA11A0004BB6A /* OAuthClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthClient.swift; sourceTree = "<group>"; };
-		4AC073AD1FECA1280004BB6A /* AthorizationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AthorizationViewController.xib; sourceTree = "<group>"; };
+		4AC073AD1FECA1280004BB6A /* AuthorizationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AuthorizationViewController.xib; sourceTree = "<group>"; };
 		4AE887F51FECA42C006696DE /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AE888031FECA559006696DE /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		4AF502741FECACC300B05C05 /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4AF5027B1FECB06700B05C05 /* AthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AthorizationViewController.swift; sourceTree = "<group>"; };
-		4AF5027D1FECB0B000B05C05 /* AthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthorizationViewController.swift; sourceTree = "<group>"; };
-		4AF5027E1FECB0B000B05C05 /* AthorizationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AthorizationViewController.xib; sourceTree = "<group>"; };
+		4AF5027B1FECB06700B05C05 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
+		4AF5027D1FECB0B000B05C05 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
+		4AF5027E1FECB0B000B05C05 /* AuthorizationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorizationViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +90,8 @@
 		4AC0738E1FEC9FD30004BB6A /* OAuthClient-macOS */ = {
 			isa = PBXGroup;
 			children = (
-				4AF5027B1FECB06700B05C05 /* AthorizationViewController.swift */,
-				4AC073AD1FECA1280004BB6A /* AthorizationViewController.xib */,
+				4AF5027B1FECB06700B05C05 /* AuthorizationViewController.swift */,
+				4AC073AD1FECA1280004BB6A /* AuthorizationViewController.xib */,
 				4AC0738F1FEC9FD30004BB6A /* OAuthClient_macOS.h */,
 				4AC073901FEC9FD30004BB6A /* Info.plist */,
 			);
@@ -103,8 +103,8 @@
 			children = (
 				4AC0739C1FEC9FE80004BB6A /* OAuthClient_iOS.h */,
 				4AC0739D1FEC9FE80004BB6A /* Info.plist */,
-				4AF5027D1FECB0B000B05C05 /* AthorizationViewController.swift */,
-				4AF5027E1FECB0B000B05C05 /* AthorizationViewController.xib */,
+				4AF5027D1FECB0B000B05C05 /* AuthorizationViewController.swift */,
+				4AF5027E1FECB0B000B05C05 /* AuthorizationViewController.xib */,
 			);
 			path = "OAuthClient-iOS";
 			sourceTree = "<group>";
@@ -238,7 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AC073AF1FECA1280004BB6A /* AthorizationViewController.xib in Resources */,
+				4AC073AF1FECA1280004BB6A /* AuthorizationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,7 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AF502801FECB0B000B05C05 /* AthorizationViewController.xib in Resources */,
+				4AF502801FECB0B000B05C05 /* AuthorizationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AF5027C1FECB06700B05C05 /* AthorizationViewController.swift in Sources */,
+				4AF5027C1FECB06700B05C05 /* AuthorizationViewController.swift in Sources */,
 				4AC073AB1FECA11A0004BB6A /* OAuthClient.swift in Sources */,
 				4AC073AA1FECA11A0004BB6A /* OAuthClientError.swift in Sources */,
 				4AC073A81FECA11A0004BB6A /* Provider.swift in Sources */,
@@ -270,7 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AF5027F1FECB0B000B05C05 /* AthorizationViewController.swift in Sources */,
+				4AF5027F1FECB0B000B05C05 /* AuthorizationViewController.swift in Sources */,
 				4AF5027A1FECACF700B05C05 /* Provider+Google.swift in Sources */,
 				4AF502761FECACE900B05C05 /* OAuthClient.swift in Sources */,
 				4AF502751FECACE500B05C05 /* Token.swift in Sources */,
