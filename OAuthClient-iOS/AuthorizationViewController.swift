@@ -20,9 +20,12 @@ public class AuthorizationViewController: UIViewController {
     
     deinit {
         NSLog("\(type(of:self)): \(#function)")
+        self.webView.uiDelegate = nil
+        self.webView.navigationDelegate = nil
+        self.webView.stopLoading()
     }
     
-    var webView: WKWebView!
+    weak var webView: WKWebView!
     var provider: Provider!
     public var completionHandler: ((Result<Token, OAuthClientError>) -> Void)? = nil
     
@@ -74,6 +77,9 @@ extension AuthorizationViewController: WKNavigationDelegate {
         
         if url.scheme == self.provider.redirectURLScheme {
             self.handleRedirectURL(url)
+            decisionHandler(.cancel)
+            return
+        } else if url.scheme != "https" {
             decisionHandler(.cancel)
             return
         }
