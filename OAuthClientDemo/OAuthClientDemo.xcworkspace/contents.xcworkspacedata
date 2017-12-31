@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:iOS/OAuthClientDemo-iOS.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:macOS/OAuthClientDemo-macOS.xcodeproj">
    </FileRef>
    <FileRef

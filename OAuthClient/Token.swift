@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Token {
+public struct Token: Codable {
     public private(set) var accessToken: String
     public let refreshToken: String
     public private(set) var expirationDate: Date

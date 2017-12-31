@@ -36,11 +36,16 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        if let storedToken = self.loadToken() {
+            self.result = .success(storedToken)
+        }
     }
 
     override func viewWillAppear() {
         if self.result == nil {
             self.showAuthorizationView()
+        } else {
+            self.showRefreshTokenView()
         }
     }
     
@@ -69,6 +74,7 @@ class ViewController: NSViewController {
             self.result = result
             switch result {
             case .success(let token):
+                self.save(token: token)
                 self.handleSuccessInFetching(token: token)
             case .failure(let error):
                 self.handleFailureInFetchingToken(withError: error)
@@ -82,12 +88,12 @@ class ViewController: NSViewController {
         let authorizationViewController = self.oauthClient.makeAuthorizationViewController()
         
         authorizationViewController.completionHandler = { [weak authorizationViewController](result) in
+            self.result = result
             switch result {
             case .success(let token):
-                self.result = .success(token)
+                self.save(token: token)
                 self.handleSuccessInFetching(token: token)
             case .failure(let error):
-                self.result = .failure(error)
                 self.handleFailureInFetchingToken(withError: error)
             }
             
@@ -125,5 +131,33 @@ class ViewController: NSViewController {
         if self.failedView == nil {
             self.showAccessTokenFetchFailedView()
         }
+    }
+    
+    
+    private var storedTokenFileURL: URL {
+        let topURL = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
+        
+        let appDir = topURL.appendingPathComponent("OAuthClientDemo")
+        if FileManager.default.fileExists(atPath: appDir.path) == false {
+            try? FileManager.default.createDirectory(at: appDir, withIntermediateDirectories: true)
+        }
+        return appDir.appendingPathComponent("authorization.dat")
+    }
+    
+    private func save(token: Token) {
+        let encoder = JSONEncoder()
+        let data = try? encoder.encode(token)
+        if let data = data {
+            try? data.write(to: self.storedTokenFileURL)
+        }
+    }
+    
+    private func loadToken() -> Token? {
+        let decoder = JSONDecoder()
+        let data = try? Data(contentsOf: self.storedTokenFileURL)
+        if let data = data {
+            return try? decoder.decode(Token.self, from: data)
+        }
+        return nil
     }
 }

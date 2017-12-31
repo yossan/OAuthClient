@@ -15,8 +15,8 @@
 		4A98E3F11FDE3FF10037FA45 /* RefreshTokenRequestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A98E3F01FDE3FF10037FA45 /* RefreshTokenRequestView.xib */; };
 		4A98E3F31FDE403B0037FA45 /* RefreshTokenRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A98E3F21FDE403B0037FA45 /* RefreshTokenRequestView.swift */; };
 		4A98E3F91FDE7E170037FA45 /* provider.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A98E3F81FDE7E170037FA45 /* provider.plist */; };
-		4AB0D8E71FECC8870099890A /* OAuthClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB0D8E81FECC8870099890A /* OAuthClient.framework */; };
-		4AB0D8EA1FECC89F0099890A /* OAuthClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB0D8E81FECC8870099890A /* OAuthClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4AAE7AB31FF4911B0033E45F /* OAuthClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AAE7AB41FF4911B0033E45F /* OAuthClient.framework */; };
+		4AAE7AB51FF491890033E45F /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AAE7AB61FF491890033E45F /* Result.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,7 +26,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4AB0D8EA1FECC89F0099890A /* OAuthClient.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,7 +44,8 @@
 		4A98E3F01FDE3FF10037FA45 /* RefreshTokenRequestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RefreshTokenRequestView.xib; sourceTree = "<group>"; };
 		4A98E3F21FDE403B0037FA45 /* RefreshTokenRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTokenRequestView.swift; sourceTree = "<group>"; };
 		4A98E3F81FDE7E170037FA45 /* provider.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = provider.plist; sourceTree = "<group>"; };
-		4AB0D8E81FECC8870099890A /* OAuthClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = OAuthClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AAE7AB41FF4911B0033E45F /* OAuthClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = OAuthClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AAE7AB61FF491890033E45F /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AB0D8E71FECC8870099890A /* OAuthClient.framework in Frameworks */,
+				4AAE7AB51FF491890033E45F /* Result.framework in Frameworks */,
+				4AAE7AB31FF4911B0033E45F /* OAuthClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +98,8 @@
 		4AE888001FECA4FC006696DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4AB0D8E81FECC8870099890A /* OAuthClient.framework */,
+				4AAE7AB61FF491890033E45F /* Result.framework */,
+				4AAE7AB41FF4911B0033E45F /* OAuthClient.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
