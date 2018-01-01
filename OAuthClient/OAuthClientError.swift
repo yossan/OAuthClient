@@ -17,7 +17,7 @@ public enum OAuthClientError: Error {
     case networkError (NSError)
     case unknown
     
-    init(_ error: String, errorDescription: String? = nil) {
+    public init(_ error: String, errorDescription: String? = nil) {
         switch error {
         case "access_denied":
             self = .accessTokenDenied
